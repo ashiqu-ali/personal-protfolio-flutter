@@ -29,7 +29,7 @@ class MainDesktop extends StatelessWidget {
                 height: small,
               ),
               SizedBox(
-                width: 245,
+                width: 260,
                 child: ElevatedButton(
                     onPressed: () {},
                     child: const Text("Get in touch",
