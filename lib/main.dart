@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       title: 'Ashiqu Ali',
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
