@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
 import '../constants/size.dart';
-import '../constants/textStyles.dart';
+import '../styles/textStyles.dart';
 
 class MainDesktop extends StatelessWidget {
   const MainDesktop({super.key});
@@ -23,7 +23,7 @@ class MainDesktop extends StatelessWidget {
             children: [
               Text(
                 "Hi, \nI'm Ashiqu Ali\nFlutter Developer",
-                style: heading1,
+                style: DesktopHeading,
               ),
               const SizedBox(
                 height: small,
@@ -40,7 +40,7 @@ class MainDesktop extends StatelessWidget {
               )
             ],
           ),
-          Image.network(
+          Image.asset(
             "assets/image.png",
             width: screenWidth / 2,
           ),
