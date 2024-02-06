@@ -7,6 +7,7 @@ import 'package:personal_protfolio/widgets/header_mobile.dart';
 import 'package:personal_protfolio/widgets/main_desktop.dart';
 import 'package:personal_protfolio/widgets/main_mobile.dart';
 import 'package:personal_protfolio/widgets/skills_desktop.dart';
+import 'package:personal_protfolio/widgets/skills_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
               if (constraints.maxWidth >= kMinDesktopWidth)
                 const DesktopSkills()
               else
-                Container(),
+                const MobileSkills(),
               //projects
               Container(
                 height: 500,
