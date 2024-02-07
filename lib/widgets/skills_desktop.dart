@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:personal_protfolio/constants/colors.dart';
 import 'package:personal_protfolio/constants/size.dart';
 import 'package:personal_protfolio/constants/skill_items.dart';
-import 'package:personal_protfolio/styles/textStyles.dart';
 
 class DesktopSkills extends StatelessWidget {
   const DesktopSkills({super.key});

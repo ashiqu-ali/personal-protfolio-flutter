@@ -13,3 +13,19 @@ TextStyle MobileHeading = GoogleFonts.poppins(
     fontWeight: FontWeight.bold,
     color: CustomColor.whitePrimary,
     height: 1.5);
+
+TextStyle myProjectTitle = GoogleFonts.poppins(
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
+  color: CustomColor.whitePrimary,
+);
+
+TextStyle myProjectSubtitle = GoogleFonts.poppins(
+  fontSize: 10,
+  color: CustomColor.whiteSecondary,
+);
+
+TextStyle projectSourceCode = GoogleFonts.poppins(
+  fontSize: 10,
+  color: CustomColor.yellowSecondary,
+);
