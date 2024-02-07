@@ -9,6 +9,8 @@ import 'package:personal_protfolio/widgets/main_mobile.dart';
 import 'package:personal_protfolio/widgets/skills_desktop.dart';
 import 'package:personal_protfolio/widgets/skills_mobile.dart';
 
+import '../styles/textStyles.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -50,10 +52,22 @@ class _HomePageState extends State<HomePage> {
                 const MainMobile(),
 
               //skills
-              if (constraints.maxWidth >= kMinDesktopWidth)
-                const DesktopSkills()
-              else
-                const MobileSkills(),
+              Container(
+                  width: double.maxFinite,
+                  padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
+                  color: CustomColor.bgLight1,
+                  child: Column(
+                    children: [
+                      //title
+                      Text('What Can I do?', style: MobileHeading),
+
+                      const SizedBox(height: xlarge),
+                      if (constraints.maxWidth >= kMinDesktopWidth)
+                        const DesktopSkills()
+                      else
+                        const MobileSkills(),
+                    ],
+                  )),
               //projects
               Container(
                 height: 500,

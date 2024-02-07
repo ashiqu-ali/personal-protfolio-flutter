@@ -9,52 +9,52 @@ class MobileSkills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          //title
-          Text('What Can I do?', style: MobileHeading),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        //platforms
+        Wrap(
+          spacing: 5,
+          runSpacing: 5,
+          children: [
+            for (int i = 0; i < platformItems.length; i++)
+              Container(
+                width: double.maxFinite,
+                decoration: BoxDecoration(
+                  color: CustomColor.bgLight2,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: ListTile(
+                  contentPadding: const EdgeInsets.symmetric(
+                      horizontal: medium, vertical: xsmall),
+                  leading: Image.asset(
+                    platformItems[i]["img"],
+                    width: 26,
+                  ),
+                  title: Text(platformItems[i]["title"]),
+                ),
+              )
+          ],
+        ),
+        const SizedBox(height: xlarge),
 
-          const SizedBox(height: xlarge),
-
-          //platforms
-          for (int i = 0; i < platformItems.length; i++)
-            Container(
-              margin: const EdgeInsets.only(bottom: 0),
-              width: double.maxFinite,
-              decoration: BoxDecoration(
-                color: CustomColor.bgLight2,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              child: ListTile(
-                contentPadding: const EdgeInsets.symmetric(
-                    vertical: xsmall, horizontal: medium),
-                leading: Image.asset(platformItems[i]["img"]),
-                title: Text(platformItems[i]["title"]),
-              ),
-            ),
-          const SizedBox(height: xlarge),
-
-          //skills
-          Wrap(
-            spacing: xsmall,
-            runSpacing: xsmall,
-            alignment: WrapAlignment.center,
-            children: [
-              for (int i = 0; i < skillItems.length; i++)
-                Chip(
-                  backgroundColor: CustomColor.bgLight2,
-                  padding: const EdgeInsets.symmetric(
-                      vertical: xsmall, horizontal: small),
-                  label: Text(skillItems[i]["title"]),
-                  avatar: Image.asset(skillItems[i]["img"], width: 26),
-                )
-            ],
-          ),
-        ],
-      ),
+        //skills
+        Wrap(
+          spacing: xsmall,
+          runSpacing: xsmall,
+          alignment: WrapAlignment.center,
+          children: [
+            for (int i = 0; i < skillItems.length; i++)
+              Chip(
+                backgroundColor: CustomColor.bgLight2,
+                padding: const EdgeInsets.symmetric(
+                    vertical: xsmall, horizontal: small),
+                label: Text(skillItems[i]["title"]),
+                avatar: Image.asset(skillItems[i]["img"], width: 26),
+              )
+          ],
+        ),
+      ],
     );
   }
 }
